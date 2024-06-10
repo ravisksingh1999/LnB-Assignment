@@ -1,0 +1,63 @@
+<!-- 4. Create a Bootstrap carousel with three slides. The first slide should contain an image, the
+second slide should contain a caption only, and the third slide should contain both an image
+and a caption. Include indicators and controls for navigation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1: Image -->
+        <div class="carousel-item active">
+          <img src="/Assessment Bootstrap/home_bg.avif" alt="Image 1">
+        </div>
+
+      <!-- Slide 3: Image and Caption -->
+      <div class="carousel-item">
+        <img src="/Assessment Bootstrap/home_bg.avif" alt="Image 3">
+        <div class="carousel-caption">
+          <h3>Caption for Slide 3</h3>
+          <p>Additional details or description here.</p>
+        </div>
+      </div>
+      </div>
+
+        <!-- Slide 3: Image and Caption -->
+        <div class="carousel-item">
+          <img src="/Assessment Bootstrap/home_bg.avif" alt="Image 3">
+          <div class="carousel-caption">
+            <h3>Caption for Slide 3</h3>
+            <p>Additional details or description here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+

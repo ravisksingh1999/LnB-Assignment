@@ -1,0 +1,52 @@
+<!-- 5. Design a Bootstrap progress bar that shows an animated progress from 0% to 100%. Include
+a label indicating the current progress percentage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    .container .progress{
+      height:100px;
+      font-size: 3rem;;
+    }
+  </style>
+
+  <title>ProgressBar</title>
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+        aria-valuemax="100">0%</div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // Animate the progress bar
+      let currentPercentage = 0;
+      const increment = 1; // Change this to adjust the increment
+
+      const interval = setInterval(function () {
+        currentPercentage += increment;
+        $(".progress-bar").css("width", currentPercentage + "%").attr("aria-valuenow", currentPercentage).text(currentPercentage + "%");
+
+        if (currentPercentage >= 100) {
+          clearInterval(interval);
+        }
+      }, 50); // Adjust the interval for smoother animation
+    });
+  </script>
+
+</body>
+
+</html>

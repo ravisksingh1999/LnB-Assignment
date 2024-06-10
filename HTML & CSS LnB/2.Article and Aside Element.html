@@ -1,0 +1,97 @@
+ <!-- 2. Article and Aside Elements:
+
+    Design a webpage layout using the `<article>` and `<aside>` elements to showcase a blog post and
+    related advertisements or supplementary content.  -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+       <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #f4f4f4;
+        }
+    
+        header {
+          width: 100%;
+          background: #c67d7d;
+          color: #fff;
+          padding: 10px 0;
+          text-align: center;
+        }
+    
+        main {
+         display: flex;
+          max-width: 1200px;
+          width: 100%;
+          margin: 20px;
+        }
+    
+        article {
+          flex: 3;
+          background: #fff;
+          padding: 20px;
+          margin-right: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        aside {
+          flex: 1;
+          background: #fff;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        footer {
+          width: 100%;
+          background: #ab7474;
+          color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          /* margin-top: 20px; */
+          position:absolute;
+          bottom:0;
+        }
+      </style>
+
+    <title>Blog Post</title>
+    </head>
+    <body>
+      <header>
+        <h1>My Blog</h1>
+      </header>
+      <main>
+        <article>
+          <h2>Blog Post Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex eu felis auctor, sit amet
+            dictum ligula euismod. Integer at erat vel leo sollicitudin fermentum. Proin at dictum nisi. Integer sit amet
+            .</p>
+          <p>Curabitur auctor urna sed ex convallis, et pharetra dui egestas. Nullam sit amet felis a sem ullamcorper
+            malesuada. Integer in neque nec leo dapibus .</p>
+          <p>Sed lacinia felis a felis ultrices, ac viverra justo pellentesque. Proin sed lacinia sem, non efficitur ante.
+            Ut imperdiet augue in augue feugiat fringilla. Aliq.</p>
+        </article>
+        <aside>
+          <h3>Related Ads</h3>
+          <p>Ad 1: Buy the best phones online!</p>
+          <p>Ad 2: Join Newsletter channel for more updates .</p>
+          <p>Ad 3: Check out our latest offers.</p>
+        </aside>
+      </main>
+      <footer>
+        <p>My blog &copy; 2024 All Rights Reserved.</p>
+      </footer>
+    </body>
+    
+    </html>
+

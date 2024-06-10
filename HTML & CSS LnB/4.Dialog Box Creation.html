@@ -1,0 +1,158 @@
+ <!-- 4. Dialog Box Creation :
+
+Implement a dialog box using HTML and CSS for a website's login form. Ensure it is responsive and
+visually appealing.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Dialog Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-button {
+      background-color: #422c2c;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #555;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s;
+    }
+
+    .dialog {
+      background: #a86363;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .dialog h2 {
+      margin-top: 0;
+    }
+
+    .dialog .form-group {
+      margin-bottom: 15px;
+    }
+
+    .dialog .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .dialog .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .dialog .form-group button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .dialog .form-group button:hover {
+      background-color: #555;
+    }
+
+    .dialog .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .overlay.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <button class="login-button" onclick="openDialog()">Login</button>
+
+  <div class="overlay" id="loginDialog">
+    <div class="dialog">
+      <button class="close-button" onclick="closeDialog()">&times;</button>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openDialog() {
+      document.getElementById('loginDialog').classList.add('show');
+    }
+
+    function closeDialog() {
+      document.getElementById('loginDialog').classList.remove('show');
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Handle form submission here
+      alert('Login form submitted!');
+
+      // Close the dialog after submission
+      closeDialog();
+    });
+  </script>
+</body>
+
+</html>

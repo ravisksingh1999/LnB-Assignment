@@ -1,0 +1,45 @@
+<!-- 3. Create a Bootstrap form with inline form controls, including a text input, a password input,
+and a submit button. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .container{
+      margin-top:2rem;
+      background-color: beige;
+      padding-top:0.8rem;
+
+    }
+  </style>
+
+<title>Bootstrap Inline Form</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="form-inline">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
